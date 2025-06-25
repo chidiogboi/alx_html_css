@@ -1,0 +1,154 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF6565;
+    --text-color: #FFFFFF;
+    --dark-color: #071629;
+    --max-width: 1000px;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    height: auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 40px;
+}
+
+.nav-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-item a:hover,
+.nav-item a:active {
+    color: var(--primary-color);
+}
+
+.hero-content {
+    margin-top: 300px;
+    padding-bottom: 100px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.btn:hover,
+.btn:active {
+    opacity: 0.9;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .hamburger-line {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .menu-toggle:checked ~ .navbar .nav-list {
+        display: flex;
+    }
+
+    .hero-content {
+        margin-top: 150px;
+    }
+}
