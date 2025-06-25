@@ -1,0 +1,28 @@
+
+/* All previous styles + hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
